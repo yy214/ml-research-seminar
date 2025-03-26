@@ -10,7 +10,7 @@ import os
 
 current_dir = os.path.dirname(__file__)
 file_path = os.path.join(current_dir, "prompt_hardest.txt")
-out_path = os.path.join(current_dir, "train_qwen2math.txt")
+out_path = os.path.join(current_dir, "train_qwen2-math.txt")
 
 gsm8k = load_dataset('gsm8k', 'main')
 prompt_complex = open(file_path, 'r', encoding='utf-8').read()

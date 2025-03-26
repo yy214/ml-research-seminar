@@ -1,4 +1,5 @@
 import re
+import os
 
 def test_answer(pred_str, ans_str):
     pattern = '\d*\.?\d+'
@@ -67,5 +68,6 @@ def parse_pred_ans(filename):
     return questions, ans_pred, ans_gold
 
 # 使用示例
-filename = 'train_qwen2math.txt'
+current_dir = os.path.dirname(__file__)
+filename = os.path.join(current_dir, 'train_qwen2math.txt')
 questions, ans_pred, ans_gold = parse_pred_ans(filename)
